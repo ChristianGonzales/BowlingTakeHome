@@ -21,6 +21,14 @@ namespace WeInfuseTakeHome
                 .SetName("Empty Game")
                 .Returns(new int?[] { });
 
+            yield return new TestCaseData((object)new string[] { "6", "0" })
+                .SetName("Foul 1")
+                .Returns(new int?[] { 6 });
+
+            yield return new TestCaseData((object)new string[] { "0", "0" })
+                .SetName("Foul 2")
+                .Returns(new int?[] { 0 });
+
             yield return new TestCaseData((object)new string[] { "4" })
                 .SetName("Single Frame Incomplete")
                 .Returns(new int?[] { null });
